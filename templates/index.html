@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your House in Mumbai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        label, select, input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Find Your Desired House in Mumbai</h1>
+    <form action="/results" method="POST">
+        <label for="bhk">Select BHK:</label>
+        <select name="bhk" id="bhk">
+            <option value="1">1 BHK</option>
+            <option value="2">2 BHK</option>
+            <option value="3">3 BHK</option>
+        </select>
+
+        <label for="location">Select Location:</label>
+        <select name="location" id="location">
+            <option value="Bandra">Bandra</option>
+            <option value="Andheri">Andheri</option>
+            <option value="Powai">Powai</option>
+        </select>
+
+        <label for="price">Select Price Range:</label>
+        <select name="price" id="price">
+            <option value="1">Below ₹20,000</option>
+            <option value="2">₹20,000 - ₹40,000</option>
+            <option value="3">Above ₹40,000</option>
+        </select>
+
+        <label for="area">Select Area (sq ft):</label>
+        <select name="area" id="area">
+            <option value="1">Below 500 sq ft</option>
+            <option value="2">500 - 1000 sq ft</option>
+            <option value="3">Above 1000 sq ft</option>
+        </select>
+
+        <input type="submit" value="Find Houses">
+    </form>
+
+</body>
+</html>
